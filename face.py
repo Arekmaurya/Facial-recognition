@@ -7,14 +7,14 @@ video_capture = cv2.VideoCapture(0)
 
 # Load and encode face images
 try:
-    obama_image = face_recognition.load_image_file("harsh.jpg")
+    obama_image = face_recognition.load_image_file("YOUR_IMAGE.jpg")
     obama_face_encodings = face_recognition.face_encodings(obama_image)
     if not obama_face_encodings:
         print("No face detected in harsh.jpg")
         exit()
     obama_face_encoding = obama_face_encodings[0]
 
-    biden_image = face_recognition.load_image_file("Hritik.jpg")
+    biden_image = face_recognition.load_image_file("YOUR_IMAGE2.jpg")
     biden_face_encodings = face_recognition.face_encodings(biden_image)
     if not biden_face_encodings:
         print("No face detected in Hritik.jpg")
