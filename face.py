@@ -10,20 +10,20 @@ try:
     obama_image = face_recognition.load_image_file("YOUR_IMAGE.jpg")
     obama_face_encodings = face_recognition.face_encodings(obama_image)
     if not obama_face_encodings:
-        print("No face detected in harsh.jpg")
+        print("No face detected in YOUR_IMAGE.jpg")
         exit()
     obama_face_encoding = obama_face_encodings[0]
 
     biden_image = face_recognition.load_image_file("YOUR_IMAGE2.jpg")
     biden_face_encodings = face_recognition.face_encodings(biden_image)
     if not biden_face_encodings:
-        print("No face detected in Hritik.jpg")
+        print("No face detected in YOUR_IMAGE2.jpg")
         exit()
     biden_face_encoding = biden_face_encodings[0]
 
     # Known faces and names
     known_face_encodings = [obama_face_encoding, biden_face_encoding]
-    known_face_names = ["Harsh", "Hritik"]
+    known_face_names = ["YOUR_IMAGE", "YOUR_IMAGE2"]
 
 except FileNotFoundError as e:
     print(f"Error loading face images: {e}")
